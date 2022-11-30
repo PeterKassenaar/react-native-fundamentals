@@ -2,7 +2,7 @@
 Example code on the accredited training course React Native Fundamentals by Peter Kassenaar
 
 ## usage
-Every folder is a mini project. This is not a monorepo.
+Every folder is a small mini project, highlighting the features in that module. This is not a monorepo.
 
 - `cd` to the folder you want to explore.
 - type `npm install` to install dependencies.
