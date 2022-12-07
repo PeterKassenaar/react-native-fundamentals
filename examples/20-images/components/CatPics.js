@@ -17,9 +17,8 @@ const CatPics = () => {
 
 const styles = StyleSheet.create({
     catPic: {
-        flex:1,
-        width: undefined,
-        height:undefined
+        width: 300,
+        height:300
     }
 })
 
