@@ -1,9 +1,14 @@
-import Sandbox from "./components/Sandbox";
-import BatteryApi from "./components/BatteryApi";
+// import BatteryApi from "./components/BatteryApi";
+import LocationApi from "./components/LocationApi";
+// import {Text, View} from "react-native";
 
 export default function App() {
-    // Just showing some flexbox-principles to lay-out your apps. No logic.
     return (
-      <BatteryApi/>
+        // (un)comment the components to see them in action
+      // <BatteryApi/>
+        <LocationApi />
+      //   <View>
+      //       <Text>Some text</Text>
+      //   </View>
     );
 }
