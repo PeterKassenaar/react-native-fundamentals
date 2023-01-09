@@ -4,10 +4,14 @@ import styles from "../styles/globalStyles";
 
 const HomeScreen = ({navigation}) => {
     const pressHandler = () => {
-        navigation.navigate('About', {
-            name: 'Ilionx',
-            location: 'Maastricht'
-        })
+        // 1. Simply navigating to another screen
+        navigation.navigate('About')
+
+        // 2. Navigating with data
+        // navigation.navigate('About', {
+        //     name: 'Proud Nerds',
+        //     location: 'Nijmegen'
+        // })
     }
     return (
         <View style={styles.container}>
