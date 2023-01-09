@@ -24,13 +24,24 @@ const LocationApi = () => {
 
             let location = await Location.getCurrentPositionAsync({});
             setLocation(location);
+            // debugging
+            console.log(location);
         })();
     }, []); // empty dependencies array, so do it one time.
 
+    // Show simple error msg or show latitude/longitude
     if (errorMsg) {
         text = errorMsg;
     } else if (location) {
-        text = JSON.stringify(location);
+        // Complete location object like: {"coords": {"accuracy": 21.600000381469727, "altitude": 54.900001525878906, "altitudeAccuracy": 2.2179784774780273, "heading": 0, "latitude": 52.1412183, "longitude": 6.2014602, "speed": 0}, "mocked": false, "timestamp": 1671782498649}
+        // We now only use latitude and longitude.
+        // AND: we assume no errors. Set up error handling yourself.
+        // You also might want to use lat/lon to initialize Google maps component, for instance
+        // https://docs.expo.dev/versions/latest/sdk/map-view/
+        text = `
+            Latitude: ${location.coords.latitude.toFixed(2)},
+            Longitude: ${location.coords.longitude.toFixed(2)} 
+            `
     }
     // Return UI
     return (
@@ -52,7 +63,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
     },
     paragraph: {
-        fontSize: 24,
+        fontSize:24,
         fontWeight: 'bold',
         color: 'coral'
     }
